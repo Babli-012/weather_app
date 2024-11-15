@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-style: normal;
+}
+      
+
+
+body {
+    background-color: black;
+}
+
+.container {
+    width: 40%;
+    background-color: white;
+    color: #171717;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 4rem auto;
+}
+
+.weather_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input {
+    padding: 0.5rem 2.5rem;
+    background-color: #1e1e1e;
+    border: none;
+    color: #fff;
+    outline: None;
+    box-shadow: rgba(100, 100, 111, 0.2)0px 7px 29px 0px;
+    border-radius: 5px;
+
+    &::placeholder {
+        color: #f7f7f7;
+    }
+}
+
+.weather_search {
+    position: relative;
+}
+
+.weather_search i {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.weather_maindata {
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.min_max {
+    display: flex;
+    column-gap: 20px;
+}
+
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+.weather_card {
+    padding: 1rem;
+    background: #1e1e1e;
+    background-color: #f7f7f7;
+    box-shadow: rgba(100, 100, 111, 0.2)0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* box-shadow: rgba(80, 74, 74, 0.1)7px 7px 10px 10px ; */
+
+}
+.weather_data{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.weather_data .data{
+    background-color: #171717;
+    color:beige;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+}
+@media only screen and (max-width:600px) {
+    .card_container{
+        display:grid;
+        grid-template-columns: 1fr;
+        place-content: center;
+    }
+   
+    .input{
+        width: 12rem;
+    }
+}
+@media only screen and (max-width:377px) {
+    .card_container{
+        display:grid;
+        grid-template-columns: 1fr;
+        place-content: center;
+    }
+    .weather_header{
+        place-content: center;
+    }
+    .input{
+        width: 5rem;
+    }
+}
